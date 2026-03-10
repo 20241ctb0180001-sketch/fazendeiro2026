@@ -11,8 +11,6 @@ public class PlayerController2 : MonoBehaviour
     public InputActionAsset InputActions;
     private InputAction moveAction;
     private InputAction fireAction;
-    private InputAction PauseAction;
-
     private void OnEnable()
     {
         InputActions.FindActionMap("Player").Enable();
@@ -27,7 +25,6 @@ public class PlayerController2 : MonoBehaviour
     {
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
-        PauseAction = InputSystem.actions.FindAction("Pause");
     }
 
     void Update()
@@ -48,11 +45,5 @@ public class PlayerController2 : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
-
-        if (PauseAction.WasPressedThisFrame())
-        {
-            
-        }
-        
     }
 }
