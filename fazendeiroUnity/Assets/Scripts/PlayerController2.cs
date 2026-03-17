@@ -11,6 +11,23 @@ public class PlayerController2 : MonoBehaviour
     public InputActionAsset InputActions;
     private InputAction moveAction;
     private InputAction fireAction;
+
+    public GameObject Movebutton;
+    public GameObject Attackbutton;
+    public GameObject MoveBG;
+
+     private void Awake()
+    {
+        moveAction = InputSystem.actions.FindAction("Move");
+        fireAction = InputSystem.actions.FindAction("Jump");
+        
+
+        if (Application.platform != RuntimePlatform.Android){
+            Movebutton.SetActive(false);
+            MoveBG.SetActive(false);
+            Attackbutton.SetActive(false);
+        }
+    }
     
     private void OnEnable()
     {
@@ -39,22 +56,6 @@ public class PlayerController2 : MonoBehaviour
         if (fireAction.WasPressedThisFrame())
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-        }
-    }
-
-    public GameObject Movebutton;
-    public GameObject Attackbutton;
-    public GameObject MoveBG;
-
-     private void Awake()
-    {
-        moveAction = InputSystem.actions.FindAction("Move");
-        fireAction = InputSystem.actions.FindAction("Jump");
-
-        if (Application.platform != RuntimePlatform.Android){
-            Movebutton.SetActive(false);
-            MoveBG.SetActive(false);
-            Attackbutton.SetActive(false);
         }
     }
 }
