@@ -20,7 +20,6 @@ public class PlayerController2 : MonoBehaviour
     {
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
-        
 
         if (Application.platform != RuntimePlatform.Android){
             Movebutton.SetActive(false);

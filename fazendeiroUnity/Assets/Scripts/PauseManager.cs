@@ -13,7 +13,6 @@ public class PauseManager : MonoBehaviour
         pauseAction = InputSystem.actions.FindAction("Pause");
         if(PausePanel)
             PausePanel.SetActive(false);
-        
         empause = false;
         Time.timeScale = 1f;
     }
