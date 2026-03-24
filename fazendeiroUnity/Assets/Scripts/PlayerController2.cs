@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,13 +6,11 @@ public class PlayerController2 : MonoBehaviour
 {
     public float speed = 20f;
     public float xRange = 15f;
-
     public GameObject projectilePrefab;
-
     public InputActionAsset InputActions;
     private InputAction moveAction;
     private InputAction fireAction;
-
+    private InputAction Ghostaction;
     public GameObject Movebutton;
     public GameObject Attackbutton;
     public GameObject MoveBG;
@@ -20,12 +19,13 @@ public class PlayerController2 : MonoBehaviour
     {
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
+        Ghostaction = InputSystem.actions.FindAction("Crouch");
 
-        if (Application.platform != RuntimePlatform.Android){
+        /*if (Application.platform != RuntimePlatform.Android){
             Movebutton.SetActive(false);
             MoveBG.SetActive(false);
             Attackbutton.SetActive(false);
-        }
+        }*/
     }
     
     private void OnEnable()
@@ -56,5 +56,17 @@ public class PlayerController2 : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+
+        if(Ghostaction.WasPressedThisFrame())
+        {
+            StartCoroutine(Ghost());
+        }
+
+    }
+
+    IEnumerator Ghost()
+    {
+        Debug.Log("transparente");
+        yield return new WaitForSeconds(2f);
     }
 }
