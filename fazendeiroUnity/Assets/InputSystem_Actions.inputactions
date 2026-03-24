@@ -473,17 +473,6 @@
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b6eab3d1-9975-4f21-a7fa-f393e458261e",
-                    "path": "<Touchscreen>/primaryTouch/tap",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Touch",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -874,17 +863,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "17eb8dc6-8672-42f7-820b-7e5befc87daa",
-                    "path": "<Touchscreen>/primaryTouch/tap",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Touch",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
