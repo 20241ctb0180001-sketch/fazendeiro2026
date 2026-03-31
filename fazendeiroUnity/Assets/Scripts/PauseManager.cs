@@ -4,13 +4,17 @@ using UnityEngine.InputSystem;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject PausePanel;
+    [SerializeField] private GameObject Confirmarsaida;
     [SerializeField] private bool empause = false;
 
     public InputActionAsset InputActions;
-    private InputAction pauseAction;
+    private InputAction pauseActionUI;
+    private InputAction pauseActionPlayer;
 
     private void Awake(){
-        pauseAction = InputSystem.actions.FindAction("Pause");
+        Confirmarsaida.SetActive(false);
+        pauseActionPlayer = InputSystem.actions.FindAction("Player/Pause");
+        pauseActionUI = InputSystem.actions.FindAction("UI/Pause");
         if(PausePanel)
             PausePanel.SetActive(false);
         empause = false;
@@ -18,12 +22,20 @@ public class PauseManager : MonoBehaviour
     }
 
     private void Update(){
-        if(pauseAction.WasPressedThisFrame())
+        if(pauseActionUI.WasPressedThisFrame())
         {
-            if(empause)
+            if (pauseActionPlayer.WasCompletedThisFrame())
+            {
                 ContJogo();
-            else
+                InputActions.FindActionMap("Player").Disable();
+                InputActions.FindActionMap("UI").Enable();                
+            }
+            else if(pauseActionUI.WasPressedThisFrame())
+            {
                 PausaJogo();
+                InputActions.FindActionMap("Player").Enable();
+                InputActions.FindActionMap("UI").Disable(); 
+            }
         }
     }
 
@@ -39,5 +51,12 @@ public class PauseManager : MonoBehaviour
         empause = false;
         Time.timeScale = 1f;
         if(PausePanel) PausePanel.SetActive(false);
+                Confirmarsaida.SetActive(false);
+
+    }
+    
+    public void Confirmacao()
+    {
+        Confirmarsaida.SetActive(true);
     }
 }

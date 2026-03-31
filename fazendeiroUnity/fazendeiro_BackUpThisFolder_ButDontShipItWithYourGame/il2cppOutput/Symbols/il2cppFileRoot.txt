@@ -1,1 +1,1 @@
-D:\My project\Library\Bee\artifacts\Android\il2cppOutput\cpp
+C:\Users\IFPR\Desktop\fazendeiro2026\fazendeiroUnity\Library\Bee\artifacts\Android\il2cppOutput\cpp

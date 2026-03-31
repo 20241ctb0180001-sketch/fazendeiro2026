@@ -7,10 +7,12 @@ public class PlayerController2 : MonoBehaviour
     public float speed = 20f;
     public float xRange = 15f;
     public GameObject projectilePrefab;
+
     public InputActionAsset InputActions;
     private InputAction moveAction;
     private InputAction fireAction;
     private InputAction Ghostaction;
+
     public GameObject Movebutton;
     public GameObject Attackbutton;
     public GameObject MoveBG;
@@ -21,11 +23,11 @@ public class PlayerController2 : MonoBehaviour
         fireAction = InputSystem.actions.FindAction("Jump");
         Ghostaction = InputSystem.actions.FindAction("Crouch");
 
-        /*if (Application.platform != RuntimePlatform.Android){
+        if (Application.platform != RuntimePlatform.Android){
             Movebutton.SetActive(false);
             MoveBG.SetActive(false);
             Attackbutton.SetActive(false);
-        }*/
+        } 
     }
     
     private void OnEnable()

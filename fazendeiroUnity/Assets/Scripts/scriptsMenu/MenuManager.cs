@@ -15,6 +15,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void Opcoes()
     {
         Painel.SetActive(false);
