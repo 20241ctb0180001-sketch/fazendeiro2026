@@ -5,6 +5,11 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField]private GameObject Painel;
     [SerializeField]private GameObject PainelOpcoes;
+
+    public void Awake()
+    {
+        PainelOpcoes.SetActive(false);
+    }
     public void Jogar()
     {
         SceneManager.LoadScene("Level1");
