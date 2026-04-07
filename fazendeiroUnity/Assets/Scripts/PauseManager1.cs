@@ -23,22 +23,21 @@ public class PauseManager : MonoBehaviour
     }
 
     private void Update(){
-        if(pauseActionUI.WasPressedThisFrame())
-        {
-            if (pauseActionPlayer.WasCompletedThisFrame())
+            if (pauseActionPlayer.WasPressedThisFrame()||pauseActionUI.WasPressedThisFrame())
             {
-                ContJogo();              
+                empause = !empause;
+            if (empause == true)
+                {
+                    PausaJogo();
+            }else if(empause == false)
+                {
+                    ContJogo();
+                }
             }
-            else if(pauseActionUI.WasPressedThisFrame())
-            {
-                PausaJogo();
-            }
-        }
     }
 
     public void PausaJogo(){
         Debug.Log("pausa");
-        empause = true;
         Time.timeScale = 0f;
         if(PausePanel) PausePanel.SetActive(true);
         InputActions.FindActionMap("Player").Disable();
@@ -47,7 +46,6 @@ public class PauseManager : MonoBehaviour
 
     public void ContJogo(){
         Debug.Log("despausa");
-        empause = false;
         Time.timeScale = 1f;
         InputActions.FindActionMap("Player").Enable();
         InputActions.FindActionMap("UI").Disable(); 

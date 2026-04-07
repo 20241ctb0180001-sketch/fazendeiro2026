@@ -7,26 +7,24 @@ public class PlayerController2 : MonoBehaviour
     public float speed = 20f;
     public float xRange = 15f;
     public GameObject projectilePrefab;
+    public GameObject ghost;
 
     public InputActionAsset InputActions;
     private InputAction moveAction;
     private InputAction fireAction;
-    private InputAction Ghostaction;
-
-    public GameObject Movebutton;
-    public GameObject Attackbutton;
-    public GameObject MoveBG;
+    private InputAction GhostAction;
 
      private void Awake()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
-        Ghostaction = InputSystem.actions.FindAction("Crouch");
+        GhostAction = InputSystem.actions.FindAction("Crouch");
+        ghost =  GameObject.Find("Player/SF_Character_FarmersWife");
 
         if (Application.platform != RuntimePlatform.Android){
-            Movebutton.SetActive(false);
-            MoveBG.SetActive(false);
-            Attackbutton.SetActive(false);
+            GameObject.Find("Move Button").SetActive(false);
+            GameObject.Find("attackButton").SetActive(false);
+            GameObject.Find("GhostButton").SetActive(false);
         } 
     }
     
@@ -59,16 +57,18 @@ public class PlayerController2 : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
 
-        if(Ghostaction.WasPressedThisFrame())
+        if(GhostAction.WasPressedThisFrame())
         {
-            StartCoroutine(Ghost());
+            ghost.SetActive(false);
+            StartCoroutine(Ghost(2));
         }
 
     }
 
-    IEnumerator Ghost()
+    private IEnumerator Ghost(float wait)
     {
         Debug.Log("transparente");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(wait);
+        ghost.SetActive(true);
     }
 }
