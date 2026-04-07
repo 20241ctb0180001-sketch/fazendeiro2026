@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,14 +9,16 @@ public class PlayerController2 : MonoBehaviour
     public float xRange = 15f;
     public GameObject projectilePrefab;
     public GameObject ghost;
-
     public InputActionAsset InputActions;
     private InputAction moveAction;
     private InputAction fireAction;
     private InputAction GhostAction;
+    public int vidaMax =3;
+    int vidaAtual;
 
      private void Awake()
     {
+        vidaAtual = vidaMax;
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
         GhostAction = InputSystem.actions.FindAction("Crouch");
@@ -62,6 +65,13 @@ public class PlayerController2 : MonoBehaviour
             ghost.SetActive(false);
             StartCoroutine(Ghost(2));
         }
+
+    }
+
+    void DanoRecebido(int dano)
+    {
+        vidaAtual = Math.Clamp(vidaAtual + dano,0, vidaMax);
+        Debug.Log(vidaAtual + "/" + vidaMax);
 
     }
 
