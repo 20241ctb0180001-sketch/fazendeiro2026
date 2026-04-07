@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -26,15 +27,11 @@ public class PauseManager : MonoBehaviour
         {
             if (pauseActionPlayer.WasCompletedThisFrame())
             {
-                ContJogo();
-                InputActions.FindActionMap("Player").Disable();
-                InputActions.FindActionMap("UI").Enable();                
+                ContJogo();              
             }
             else if(pauseActionUI.WasPressedThisFrame())
             {
                 PausaJogo();
-                InputActions.FindActionMap("Player").Enable();
-                InputActions.FindActionMap("UI").Disable(); 
             }
         }
     }
@@ -44,19 +41,33 @@ public class PauseManager : MonoBehaviour
         empause = true;
         Time.timeScale = 0f;
         if(PausePanel) PausePanel.SetActive(true);
+        InputActions.FindActionMap("Player").Disable();
+        InputActions.FindActionMap("UI").Enable(); 
     }
 
     public void ContJogo(){
         Debug.Log("despausa");
         empause = false;
         Time.timeScale = 1f;
+        InputActions.FindActionMap("Player").Enable();
+        InputActions.FindActionMap("UI").Disable(); 
         if(PausePanel) PausePanel.SetActive(false);
-                Confirmarsaida.SetActive(false);
-
+            Confirmarsaida.SetActive(false); 
     }
     
     public void Confirmacao()
     {
         Confirmarsaida.SetActive(true);
+    }
+
+    public void Sair()
+    {
+        Debug.Log("saindo");
+        Application.Quit();
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
