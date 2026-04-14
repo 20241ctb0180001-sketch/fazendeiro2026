@@ -14,10 +14,14 @@ public class PlayerController2 : MonoBehaviour
     private InputAction moveAction;
     private InputAction fireAction;
     private InputAction GhostAction;
+    private InputAction Meowaction;
     private int maxVida = 3;
     public int vida;
     public VIdaUI vidaUI;
     public bool transparente = false;
+
+    private AudioSource source;
+    public AudioClip MEOW;
 
      private void Awake()
     {
@@ -25,6 +29,7 @@ public class PlayerController2 : MonoBehaviour
         fireAction = InputSystem.actions.FindAction("Jump");
         GhostAction = InputSystem.actions.FindAction("Crouch");
         ghost = GameObject.Find("Player/SF_Character_FarmersWife");
+        Meowaction = InputSystem.actions.FindAction("Sprint");
         vida = maxVida;
         vidaUI.SetMaxHearts(maxVida);
 
@@ -32,7 +37,10 @@ public class PlayerController2 : MonoBehaviour
             GameObject.Find("Move Button").SetActive(false);
             GameObject.Find("attackButton").SetActive(false);
             GameObject.Find("GhostButton").SetActive(false);
+            GameObject.Find("MeowButton").SetActive(false);
         } 
+
+        source = GetComponent<AudioSource>();
     }
     
     private void OnEnable()
@@ -71,6 +79,10 @@ public class PlayerController2 : MonoBehaviour
             StartCoroutine(Ghost(2));
         }
 
+        if (Meowaction.WasPressedThisFrame())
+        {
+            source.PlayOneShot(MEOW, 1.0f);
+        }
     }
 
     private IEnumerator Ghost(float wait)
@@ -81,21 +93,19 @@ public class PlayerController2 : MonoBehaviour
         ghost.SetActive(true);
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(UnityEngine.Collider collider)
     {
-        if(collision.gameObject.CompareTag("Animal"))
+        if(collider.gameObject.CompareTag("Animal"))
         {
             if(transparente == true){
-                vida=vida;
                 vidaUI.UpdateHearts(vida);
             }else{
                 vida -= 1;
                 vidaUI.UpdateHearts(vida);
-                Physics.IgnoreCollision(GetComponent<Collider>(), collision.collider);
                 if(vida <= 0)
                 {
                     SceneManager.LoadScene("GameOver");
-                }   
+                }
             }
 
         }
