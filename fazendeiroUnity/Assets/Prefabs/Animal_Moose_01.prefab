@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 6957287868726578248}
   - component: {fileID: 797342857}
   - component: {fileID: 6276314051057009285}
+  - component: {fileID: 1565736985475016521}
   m_Layer: 0
   m_Name: Animal_Moose_01
   m_TagString: Animal
@@ -573,6 +574,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18087102, y: 0.46442708, z: 0.3956766}
   m_Center: {x: 0.003542602, y: 0.22549868, z: 0.08013357}
+--- !u!54 &1565736985475016521
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957287870193332004}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6957287870193332916
 GameObject:
   m_ObjectHideFlags: 0
