@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2009,10 +2009,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3368550998252044939, guid: 3e72a3cfb85b1344ca8ceae8fa56d1d4, type: 3}
   ghost: {fileID: 1761695642}
   InputActions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
-  vida: 0
-  vidaUI: {fileID: 1110200113}
   transparente: 0
   MEOW: {fileID: 8300000, guid: eb4b72bdd1f616947bfc65b191ecf5dd, type: 3}
+  placar: {fileID: 1260340445}
 --- !u!65 &981019829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2158,6 +2157,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &981019838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981019821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25dc0e567fd2f64d93b084cf1442829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaManager
+  player: {fileID: 981019828}
+  vidaui: {fileID: 1110200113}
+  vida: 0
 --- !u!1 &992285705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,6 +2875,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100046, guid: 3cf7f489270aac84fb12901330960a5b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 981019835}
+    - targetCorrespondingSourceObject: {fileID: 100046, guid: 3cf7f489270aac84fb12901330960a5b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981019838}
   m_SourcePrefab: {fileID: 100100000, guid: 3cf7f489270aac84fb12901330960a5b, type: 3}
 --- !u!1 &1761695642 stripped
 GameObject:

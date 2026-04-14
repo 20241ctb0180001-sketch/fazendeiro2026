@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -11,27 +9,18 @@ public class PlayerController2 : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject ghost;
     public InputActionAsset InputActions;
-    private InputAction moveAction;
-    private InputAction fireAction;
-    private InputAction GhostAction;
-    private InputAction Meowaction;
-    private int maxVida = 3;
-    public int vida;
-    public VIdaUI vidaUI;
+    private InputAction moveAction, fireAction, GhostAction, Meowaction;
     public bool transparente = false;
-
     private AudioSource source;
     public AudioClip MEOW;
-
+    public Placar placar;
      private void Awake()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         fireAction = InputSystem.actions.FindAction("Jump");
         GhostAction = InputSystem.actions.FindAction("Crouch");
         ghost = GameObject.Find("Player/SF_Character_FarmersWife");
-        Meowaction = InputSystem.actions.FindAction("Sprint");
-        vida = maxVida;
-        vidaUI.SetMaxHearts(maxVida);
+        Meowaction = InputSystem.actions.FindAction("Meow");
 
         if (Application.platform != RuntimePlatform.Android){
             GameObject.Find("Move Button").SetActive(false);
@@ -78,10 +67,11 @@ public class PlayerController2 : MonoBehaviour
             transparente = true;
             StartCoroutine(Ghost(2));
         }
-
+        
         if (Meowaction.WasPressedThisFrame())
         {
             source.PlayOneShot(MEOW, 1.0f);
+            placar.AddPoints(10);
         }
     }
 
@@ -91,23 +81,5 @@ public class PlayerController2 : MonoBehaviour
         yield return new WaitForSeconds(wait);
         transparente = false;
         ghost.SetActive(true);
-    }
-
-    public void OnTriggerEnter(UnityEngine.Collider collider)
-    {
-        if(collider.gameObject.CompareTag("Animal"))
-        {
-            if(transparente == true){
-                vidaUI.UpdateHearts(vida);
-            }else{
-                vida -= 1;
-                vidaUI.UpdateHearts(vida);
-                if(vida <= 0)
-                {
-                    SceneManager.LoadScene("GameOver");
-                }
-            }
-
-        }
     }
 }
