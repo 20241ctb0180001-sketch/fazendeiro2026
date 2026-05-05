@@ -10,7 +10,7 @@ public class Placar : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textStars;
     public int pontos;
     public int estrelas;
-    [SerializeField] private int requiredStars = 3;
+    [SerializeField] private int requiredStars = 1;
     private bool menuLoaded = false;
 
     public void AddPoints(int points){

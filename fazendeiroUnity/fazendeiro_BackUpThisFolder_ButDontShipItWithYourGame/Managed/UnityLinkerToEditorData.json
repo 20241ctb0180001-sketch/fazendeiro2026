@@ -68,7 +68,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -86,7 +87,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -141,7 +143,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -163,7 +166,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -185,7 +189,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -201,7 +206,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -229,7 +235,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -239,7 +246,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -265,7 +273,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -281,7 +290,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -315,7 +325,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -331,7 +342,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -341,7 +353,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -375,7 +388,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -391,7 +405,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -425,7 +440,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -455,7 +471,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1255,7 +1272,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1271,7 +1289,8 @@
             "scenes": [
               "Assets/Scenes/GameOver.unity",
               "Assets/Scenes/Level1.unity",
-              "Assets/Scenes/Menu.unity"
+              "Assets/Scenes/Menu.unity",
+              "Assets/Scenes/Win.unity"
             ],
             "dependencyType": 0,
             "icon": null
