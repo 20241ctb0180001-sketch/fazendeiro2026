@@ -71,7 +71,6 @@ public class PlayerController2 : MonoBehaviour
         if (Meowaction.WasPressedThisFrame())
         {
             source.PlayOneShot(MEOW, 1.0f);
-            placar.AddPoints(10);
         }
     }
 

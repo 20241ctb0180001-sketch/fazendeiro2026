@@ -22,14 +22,14 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
     }
 
-    public void Exit()
+    /*public void Exit()
     {
         Debug.Log("Game Over!");
-        /*
+        
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else
         Application.Quit(); // original code to quit Unity player
-#endif*/
-    }
+#endif
+    }*/
 }

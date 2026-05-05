@@ -1040,7 +1040,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3cb7a01022a204b6d871219becaca1ae, type: 2}
+  - {fileID: 2100000, guid: 238e68fd68e894d1fa27387d26f026f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1428,6 +1428,8 @@ MonoBehaviour:
   - {fileID: 3490795014923457838, guid: 463a73af1ac7b964491d0d29baa6889c, type: 3}
   - {fileID: 6957287870193332004, guid: f75e518f952b975429df3166e71d2c9a, type: 3}
   - {fileID: 5792771941504673540, guid: bdb76be5387fe39429099295a36dd82d, type: 3}
+  estrelaprefab: {fileID: 7478814756364031717, guid: 9c6032bc7284a5146a9b61081bf3c510, type: 3}
+  placar: {fileID: 1260340445}
 --- !u!4 &695279247
 Transform:
   m_ObjectHideFlags: 0
@@ -2447,6 +2449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Placar
   Npontos: 0
   textPontos: {fileID: 903972111}
+  pontos: 0
 --- !u!4 &1260340446
 Transform:
   m_ObjectHideFlags: 0
@@ -2509,6 +2512,7 @@ MonoBehaviour:
   PausePanel: {fileID: 1828071571}
   Confirmarsaida: {fileID: 564000393}
   empause: 0
+  detect: {fileID: 0}
   InputActions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
 --- !u!1 &1582259836
 GameObject:
@@ -2700,7 +2704,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3cb7a01022a204b6d871219becaca1ae, type: 2}
+  - {fileID: 2100000, guid: 238e68fd68e894d1fa27387d26f026f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
