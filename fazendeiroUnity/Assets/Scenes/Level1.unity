@@ -2453,7 +2453,7 @@ MonoBehaviour:
   textStars: {fileID: 2041465482}
   pontos: 0
   estrelas: 0
-  requiredStars: 1
+  requiredStars: 3
 --- !u!4 &1260340446
 Transform:
   m_ObjectHideFlags: 0
