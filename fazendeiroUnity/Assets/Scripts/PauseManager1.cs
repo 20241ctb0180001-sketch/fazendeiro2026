@@ -7,7 +7,6 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private GameObject Confirmarsaida;
     [SerializeField] private bool empause = false;
-    public DetectCollisions detect;
 
     public InputActionAsset InputActions;
     private InputAction pauseActionUI;
@@ -17,7 +16,7 @@ public class PauseManager : MonoBehaviour
         Confirmarsaida.SetActive(false);
         pauseActionPlayer = InputSystem.actions.FindAction("Player/Pause");
         pauseActionUI = InputSystem.actions.FindAction("UI/Pause");
-        if(PausePanel)
+        if (PausePanel)
             PausePanel.SetActive(false);
         empause = false;
         Time.timeScale = 1f;
@@ -34,11 +33,6 @@ public class PauseManager : MonoBehaviour
                 {
                     ContJogo();
                 }
-            }
-
-            if(detect.stars >= 5)
-            {
-                SceneManager.LoadScene("Menu");
             }
     }
 

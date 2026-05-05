@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c1f0993bb7ca54fa75a0edff52bf48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
-  Painel: {fileID: 0}
-  PainelOpcoes: {fileID: 0}
+  Painel: {fileID: 1017892846}
+  PainelOpcoes: {fileID: 1568539528}
 --- !u!4 &724434286
 Transform:
   m_ObjectHideFlags: 0
